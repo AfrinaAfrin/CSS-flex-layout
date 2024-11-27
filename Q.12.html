@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - flex-direction</title>
+    <style>
+         
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        
+        .container {
+            display: flex;
+            justify-content: space-around;  
+            width: 80%;
+            height: 300px;
+            background-color: #f0f0f0;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            margin: 20px;
+            transition: flex-direction 0.3s ease; 
+        }
+
+         
+        .item {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 18px;
+            flex: 1;  
+        }
+
+        
+        .container.row {
+            flex-direction: row; 
+        }
+
+       
+        .container.column {
+            flex-direction: column;  
+        }
+
+       
+        .toggle-layout {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: none;
+        }
+
+         
+        .toggle-layout-label {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .toggle-layout-label:hover {
+            background-color: #45a049;
+        }
+
+           
+        .toggle-layout:checked + .container {
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" class="toggle-layout" id="toggleLayout">
+    <label for="toggleLayout" class="toggle-layout-label">Change Layout</label>
+
+    <div class="container row">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+</body>
+</html>

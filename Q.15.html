@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Image Gallery</title>
+  <style>
+   
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid with auto fill */
+      gap: 20px ;
+      padding: 20px;
+    }
+
+     
+    .gallery img {
+      width: 100%;   
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    }
+
+    
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Responsive Image Gallery</h1>
+  <div class="gallery">
+    <img src="https://fastly.picsum.photos/id/376/200/200.jpg?hmac=lM2SnAPO9nDnPBP5FjJOFIJSaRoPKUJRovk6goT_nA4 " alt="Random Image 1">
+    <img src=" https://picsum.photos/id/237/536/354" alt="Random Image 2">
+    <img src="https://picsum.photos/seed/picsum/536/354 " alt="Random Image 3">
+    <img src="https://picsum.photos/id/1084/536/354?grayscale " alt="Random Image 4">
+    <img src="https://picsum.photos/id/1060/536/354?blur=2 " alt="Random Image 5">
+    <img src="https://picsum.photos/id/870/536/354?grayscale&blur=2 " alt="Random Image 6">
+  </div>
+</body>
+</html>
